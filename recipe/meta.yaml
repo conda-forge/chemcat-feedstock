@@ -1,5 +1,5 @@
 {% set name = "chemcat" %}
-{% set version = "0.3.3" %}
+{% set version = "0.3.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/chemcat-{{ version }}.tar.gz
-  sha256: 4fdcc8099d7e636324462095612d289e111cb33deb028d16c30427b5df306e99
+  sha256: 17f7cc0712da94eab2dc42a71def78d730e2595629de33896e50b8b777fe62fb
 
 build:
   script: {{ PYTHON }} -m pip install . -vv

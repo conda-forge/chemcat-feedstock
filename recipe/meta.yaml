@@ -11,7 +11,7 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   skip: true  # [win]
 requirements:
   build:
@@ -27,7 +27,6 @@ requirements:
     - numpy >=1.19.1
     - python
     - scipy >=1.5.2
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:

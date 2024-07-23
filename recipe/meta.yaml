@@ -11,8 +11,9 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   skip: true  # [win]
+  skip: true  # [py<39]
 requirements:
   build:
     - {{ compiler('c') }}
@@ -24,9 +25,9 @@ requirements:
   run:
     - matplotlib-base >=3.3.4
     - more-itertools >=8.4.0
-    - numpy >=1.19.1
+    - numpy >=1.23.5
     - python
-    - scipy >=1.5.2
+    - scipy >=1.5.4
 
 test:
   imports:

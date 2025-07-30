@@ -11,7 +11,7 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   skip: true  # [win]
   skip: true  # [py<39]
 requirements:
@@ -19,14 +19,15 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
-    - numpy
-    - pip
     - python
+    - pip
+    - setuptools
+    - numpy
   run:
+    - python
     - matplotlib-base >=3.9.2
     - more-itertools >=8.4.0
     - numpy >=2.0.0
-    - python
     - scipy >=1.13.0
 
 test:
@@ -40,7 +41,7 @@ test:
 about:
   home: https://github.com/atmolib/chemcat
   summary: Chemistry Calculator for Atmospheres
-  license: GPL-2.0
+  license: GPL-2.0-or-later
   license_file:
     - LICENSE
   dev_url: https://github.com/atmolib/chemcat

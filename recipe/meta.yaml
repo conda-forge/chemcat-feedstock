@@ -13,20 +13,19 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
   number: 1
   skip: true  # [win]
-  skip: true  # [py<39]
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
+    - python >=3.9,<3.14
     - numpy
     - pip
-    - python
   run:
+    - python >=3.9,<3.14
     - matplotlib-base >=3.9.2
     - more-itertools >=8.4.0
     - numpy >=2.0.0
-    - python
     - scipy >=1.13.0
 
 test:

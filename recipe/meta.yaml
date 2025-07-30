@@ -23,11 +23,11 @@ requirements:
     - pip
     - python
   run:
-    - matplotlib-base >=3.3.4
+    - matplotlib-base >=3.9.2
     - more-itertools >=8.4.0
-    - numpy >=1.23.5
+    - numpy >=2.0.0
     - python
-    - scipy >=1.5.4
+    - scipy >=1.13.0
 
 test:
   imports:
